@@ -152,6 +152,10 @@ void set_layer_color(int layer) {
   }
 }
 
+void matrix_scan_user(void) {
+  achordion_task();
+}
+
 bool rgb_matrix_indicators_user(void) {
   if (rawhid_state.rgb_control) {
       return false;
