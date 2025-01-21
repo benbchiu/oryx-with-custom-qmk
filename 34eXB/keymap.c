@@ -14,7 +14,8 @@ const key_override_t rprn_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_RPRN, 
 // This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
 	&lprn_key_override,
-	&rprn_key_override
+	&rprn_key_override,
+	NULL
 };
 
 void housekeeping_task_user(void) {
