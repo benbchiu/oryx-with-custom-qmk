@@ -8,11 +8,11 @@ enum custom_keycodes {
   RGB_SLD = ML_SAFE_RANGE,
 };
 
-const key_override_t lprn_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LBRC, KC_LPRN);
-const key_override_t rprn_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_RBRC, KC_RPRN);
+const key_override_t lprn_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_LPRN, KC_LBRC );
+const key_override_t rprn_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_RPRN, KC_RBRC);
 
 // This globally defines all key overrides to be used
-const key_override_t *key_overrides[] = {
+const key_override_t **key_overrides = (const key_override_t *[]){
 	&lprn_key_override,
 	&rprn_key_override,
 	NULL
