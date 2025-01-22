@@ -11,17 +11,17 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
-    KC_TRANSPARENT, KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_CAPS,        KC_U,           KC_O,           KC_F,           KC_Z,                                           KC_B,           KC_P,           KC_Y,           KC_L,           KC_TRANSPARENT, KC_TRANSPARENT, 
-    CW_TOGG,        MT(MOD_LALT, KC_A),MT(MOD_LCTL, KC_I),LT(1,KC_E),     MT(MOD_LSFT, KC_N),MT(MOD_LGUI, KC_M),                                MT(MOD_LGUI, KC_G),MT(MOD_LSFT, KC_T),LT(1,KC_S),     MT(MOD_LCTL, KC_R),MT(MOD_LALT, KC_C),KC_DELETE,      
-    KC_TRANSPARENT, OSL(2),         KC_TAB,         KC_J,           KC_H,           KC_X,                                           KC_K,           KC_D,           KC_V,           KC_Q,           KC_W,           KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_CAPS,        KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_TRANSPARENT, KC_1,           KC_U,           KC_O,           KC_F,           KC_Z,                                           KC_B,           KC_P,           KC_Y,           KC_L,           KC_0,           KC_TRANSPARENT, 
+    KC_TRANSPARENT, OSL(2),         MT(MOD_LCTL, KC_I),LT(1,KC_E),     MT(MOD_LSFT, KC_N),MT(MOD_LGUI, KC_M),                                MT(MOD_LGUI, KC_G),MT(MOD_LSFT, KC_T),LT(1,KC_S),     MT(MOD_LCTL, KC_R),KC_W,           KC_TRANSPARENT, 
+    CW_TOGG,        MT(MOD_LALT, KC_A),KC_TAB,         KC_J,           KC_H,           KC_X,                                           KC_K,           KC_D,           KC_V,           KC_Q,           MT(MOD_LALT, KC_C),KC_DELETE,      
                                                     KC_BSPC,        KC_ESCAPE,                                      KC_ENTER,       KC_SPACE
   ),
   [1] = LAYOUT_voyager(
     KC_NO,          KC_NO,          KC_NO,          KC_LCBR,        KC_RCBR,        KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          
-    KC_NO,          KC_NO,          KC_NO,          KC_LPRN,        KC_RPRN,        KC_NO,                                          KC_PAGE_UP,     KC_NO,          KC_UP,          KC_NO,          KC_HOME,        KC_NO,          
-    KC_NO,          KC_SCLN,        KC_SLASH,       KC_COMMA,       KC_DOT,         KC_GRAVE,                                       KC_PGDN,        KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_END,         KC_NO,          
-    KC_NO,          KC_QUOTE,       KC_BSLS,        KC_EQUAL,       KC_MINUS,       KC_NO,                                          KC_NO,          LCTL(LSFT(KC_TAB)),KC_NO,          LCTL(KC_TAB),   KC_NO,          KC_NO,          
+    KC_NO,          KC_NO,          KC_NO,          KC_LPRN,        KC_RPRN,        KC_NO,                                          KC_PAGE_UP,     KC_NO,          KC_UP,          KC_NO,          KC_NO,          KC_NO,          
+    KC_NO,          KC_SCLN,        KC_SLASH,       KC_COMMA,       KC_DOT,         KC_GRAVE,                                       KC_PGDN,        KC_LEFT,        KC_DOWN,        KC_RIGHT,       KC_HOME,        KC_NO,          
+    KC_NO,          KC_QUOTE,       KC_BSLS,        KC_EQUAL,       KC_MINUS,       KC_NO,                                          KC_NO,          LCTL(LSFT(KC_TAB)),KC_NO,          LCTL(KC_TAB),   KC_END,         KC_NO,          
                                                     KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT
   ),
   [2] = LAYOUT_voyager(
@@ -42,7 +42,7 @@ void keyboard_post_init_user(void) {
 }
 
 const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
-    [0] = { {0,0,0}, {139,221,204}, {139,221,204}, {139,221,204}, {139,221,204}, {139,221,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {41,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {139,221,204}, {139,221,204}, {139,221,204}, {139,221,204}, {139,221,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
+    [0] = { {0,0,0}, {0,0,0}, {139,221,204}, {139,221,204}, {139,221,204}, {139,221,204}, {0,0,0}, {139,221,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {41,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {139,221,204}, {139,221,204}, {139,221,204}, {139,221,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {139,221,204}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
 
     [1] = { {0,0,0}, {0,0,0}, {0,0,0}, {74,255,255}, {74,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {74,255,255}, {74,255,255}, {0,0,0}, {0,0,0}, {74,255,255}, {74,255,255}, {74,255,255}, {74,255,255}, {74,255,255}, {0,0,0}, {74,255,255}, {74,255,255}, {74,255,255}, {74,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {139,180,250}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {139,180,250}, {139,180,250}, {139,180,250}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
 
