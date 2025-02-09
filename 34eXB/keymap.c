@@ -11,9 +11,9 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_voyager(
-    KC_TRANSPARENT, KC_CAPS,        KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
+    QK_DYNAMIC_TAPPING_TERM_UP,QK_DYNAMIC_TAPPING_TERM_DOWN,KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,                                 KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, 
     KC_TRANSPARENT, KC_TRANSPARENT, KC_U,           KC_O,           KC_F,           KC_Q,                                           KC_B,           KC_P,           KC_Y,           KC_L,           KC_TRANSPARENT, KC_TRANSPARENT, 
-    KC_TRANSPARENT, KC_TRANSPARENT, LT(2,KC_I),     LT(1,KC_E),     MT(MOD_LSFT, KC_N),MT(MOD_LGUI, KC_M),                                MT(MOD_LGUI, KC_G),MT(MOD_LSFT, KC_T),LT(1,KC_S),     LT(2,KC_R),     KC_TRANSPARENT, KC_TRANSPARENT, 
+    KC_CAPS,        KC_TRANSPARENT, LT(2,KC_I),     LT(1,KC_E),     MT(MOD_LSFT, KC_N),MT(MOD_LGUI, KC_M),                                MT(MOD_LGUI, KC_G),MT(MOD_LSFT, KC_T),LT(1,KC_S),     LT(2,KC_R),     KC_TRANSPARENT, KC_TRANSPARENT, 
     CW_TOGG,        MT(MOD_LCTL, KC_A),MT(MOD_LALT, KC_Z),KC_J,           LT(3,KC_H),     KC_X,                                           KC_K,           LT(3,KC_D),     KC_V,           MT(MOD_LALT, KC_W),MT(MOD_LCTL, KC_C),KC_DELETE,      
                                                     KC_BSPC,        KC_ESCAPE,                                      KC_ENTER,       KC_SPACE
   ),
@@ -44,13 +44,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case MT(MOD_LCTL, KC_A):
-            return TAPPING_TERM + 150;
+            return g_tapping_term + 150;
         case MT(MOD_LCTL, KC_C):
-            return TAPPING_TERM + 150;
+            return g_tapping_term + 150;
         case MT(MOD_LGUI, KC_0):
-            return TAPPING_TERM + 150;
+            return g_tapping_term + 150;
         default:
-            return TAPPING_TERM;
+            return g_tapping_term;
     }
 }
 
